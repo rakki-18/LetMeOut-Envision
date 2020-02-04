@@ -28,7 +28,7 @@ void dijkstra(int graph[V][V] , int start)
         sptset[u]=true;
         for(int v=0;v<V;v++)
         {
-            if(graph[u][v]&&dist[u][v]+graph[u][v]<dist[v]&&!sptset[v])
+            if(graph[u][v]&&dist[u]+graph[u][v]<dist[v]&&!sptset[v])
                 dist[v]=dist[u]+graph[u][v];
         }
     }
